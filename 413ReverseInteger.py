@@ -10,10 +10,11 @@ class Solution:
         
     def reverseInteger(self, n):
         # Write your code here
-        if abs(n) > 214748364:
-            return 0
         if n > 0:
             reverseInt = self.reversePositive(n)
         else:
             reverseInt = self.reversePositive(abs(n)) * -1
-        return reverseInt
+        if abs(reverseInt) >  2147483647:
+            return 0
+        else:
+            return reverseInt
