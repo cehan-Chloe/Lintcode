@@ -37,8 +37,9 @@ class Solution:
                 end = mid
         if A[end] == target:
             right = end 
-        ''' one tip: cannot use another if, because there maybe two continuous same num. so A[start] and A[end] maybe the same and the value of A[start] may override the right value
-        '''
+        # one tip: cannot use another if, because there maybe two continuous same numbers. 
+        # so A[start] and A[end] maybe the same and the value of A[start] may override the right value
+        
         elif A[start] == target:
             right = start
         return [left,right]
