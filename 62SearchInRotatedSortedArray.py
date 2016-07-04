@@ -13,8 +13,8 @@ class Solution:
             mid = start + (end - start) / 2
             if A[mid] == target:
                 return mid
-            if A[start] < A[mid]:
-                if A[start] <= target and target <= A[mid]:
+            elif A[end] < A[mid]:
+                if A[end] < target and target <= A[mid]:
                     end = mid
                 else:
                     start = mid
@@ -23,9 +23,10 @@ class Solution:
                     start = mid
                 else:
                     end = mid
+        if A[end] == target:
+            return end                    
         if A[start] == target:
             return start
-        if A[end] == target:
-            return end
+        
         return -1
 
