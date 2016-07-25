@@ -30,7 +30,6 @@ class Solution(object):
         if root.right is None:
             return successor
         root = root.right
-        # find the successor of root
         while root.left is not None:
             root = root.left
         
