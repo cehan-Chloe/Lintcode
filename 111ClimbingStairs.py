@@ -14,6 +14,7 @@ class Solution:
             return 2
         f[1] = 1
         f[2] = 2
+        # because they can only take one stair or two stars to f[i] and the path won't be the same because the last step is different!
         for i in range(3, n+1):
             f[i] = f[i-1] + f[i-2] 
         return f[n]
