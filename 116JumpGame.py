@@ -1,6 +1,7 @@
 class Solution:
     # @param A, a list of integers
     # @return a boolean
+    # need to be optiminized
     def canJump(self, A):
         length = len(A)
         f = [[] for i in range(length)]
